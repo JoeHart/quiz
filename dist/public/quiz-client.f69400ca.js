@@ -59828,7 +59828,7 @@ var styled_components_1 = __importDefault(require("styled-components"));
 
 var logosmalltrans_png_1 = __importDefault(require("../assets/logosmalltrans.png"));
 
-var socket = socket_io_client_1.io("ws://localhost:8000/", {
+var socket = socket_io_client_1.io("ws://159.65.210.89:8000/", {
   reconnectionDelayMax: 10000,
   query: {
     token: userID_1.getUserId()
@@ -60199,7 +60199,7 @@ var Round_1 = __importDefault(require("./admin/Round"));
 
 var Answers_1 = __importDefault(require("./admin/Answers"));
 
-var socket = socket_io_client_1.io("ws://localhost:8000/admin", {
+var socket = socket_io_client_1.io("ws://159.65.210.89:8000/admin", {
   reconnectionDelayMax: 10000,
   query: {
     token: userID_1.getUserId()
@@ -60324,7 +60324,7 @@ var styled_components_1 = __importDefault(require("styled-components"));
 
 var logosmalltrans_png_1 = __importDefault(require("../assets/logosmalltrans.png"));
 
-var socket = socket_io_client_1.io("ws://localhost:8000/admin", {
+var socket = socket_io_client_1.io("ws://159.65.210.89:8000/admin", {
   reconnectionDelayMax: 10000,
   query: {
     token: userID_1.getUserId()
@@ -60446,7 +60446,7 @@ var react_bootstrap_1 = require("react-bootstrap");
 
 var styled_components_1 = __importDefault(require("styled-components"));
 
-var socket = socket_io_client_1.io("ws://localhost:8000/admin", {
+var socket = socket_io_client_1.io("ws://159.65.210.89:8000/admin", {
   reconnectionDelayMax: 10000,
   query: {
     token: userID_1.getUserId()
@@ -60713,7 +60713,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53991" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58547" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
