@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const app = express_1.default();
 var http = require("http").createServer(app);
+var path = require("path");
 let io = require("socket.io")(http, {
     cors: {
         origin: "*",
@@ -13,6 +14,14 @@ let io = require("socket.io")(http, {
     },
 });
 const adminNamespace = io.of("/admin");
+app.get("/", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.get("/admin", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.get("/scores", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.get("/", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.use(express_1.default.static(__dirname + "/public"));
+app.listen(8080, () => {
+    console.log(`⚡️[server]: Server is running at https://localhost:${8080}`);
+});
 const port = 8000;
 const state = {
     teams: [],

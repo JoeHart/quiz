@@ -2,7 +2,7 @@ import express from "express";
 const app = express();
 var http = require("http").createServer(app);
 import * as socketio from "socket.io";
-
+var path = require("path");
 let io = require("socket.io")(http, {
   cors: {
     origin: "*",
@@ -11,6 +11,14 @@ let io = require("socket.io")(http, {
 });
 
 const adminNamespace = io.of("/admin");
+app.get("/", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.get("/admin", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.get("/scores", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.get("/answers", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.use(express.static(__dirname + "/public"));
+app.listen(8080, () => {
+  console.log(`⚡️[server]: Server is running at https://localhost:${8080}`);
+});
 
 const port = 8000;
 type Team = {
