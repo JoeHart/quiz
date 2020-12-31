@@ -57977,7 +57977,7 @@ function RoundView(_a) {
       controlId: "formBasicEmail"
     }, React.createElement(react_bootstrap_1.Form.Label, null, "#", index + 1), React.createElement(react_bootstrap_1.Form.Control, {
       type: "text",
-      placeholder: "Enter team name",
+      placeholder: "Enter answer",
       value: answer,
       onChange: function onChange(e) {
         return setAnswer(index, e.target.value);
